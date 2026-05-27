@@ -1,0 +1,249 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.dt_EmployeeInf="[new System.Data.DataTable With {.TableName = &quot;TableName&quot;}]"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common"
+ xmlns:this="clr-namespace:"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:uix="http://schemas.uipath.com/workflow/activities/uix"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="dt_EmployeeInf" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="[0]" Name="intRowIndex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch - RPA Challenge fill out the form" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch.Try>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Use Browser Chrome: Fill out the form" HealingAgentBehavior="Job" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Start" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="11, 574, 274, 54" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Start' /&gt;" Guid="3f59b11a-b1d5-4d44-bb48-4a4ba8bf5951" InformativeScreenshot="37743d557d7afb21f70384d041b739b9.jpg" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Assign DisplayName="Assign Variable Value - Update Columns Last Name" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[dt_EmployeeInf.Columns("Last Name ").ColumnName]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">["Last Name"]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intRowIndex]" DataTable="[dt_EmployeeInf]" DisplayName="For Each Row in Data Table - dt_EmployeeInf" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow.Body>
+                      <ActivityAction x:TypeArguments="sd:DataRow">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <TryCatch sap2010:Annotation.AnnotationText="Fill the form fields with the values from the CurrentRow" DisplayName="Try Catch - Fill the form fields" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                            <TryCatch.Try>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - First Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;First Name&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="648, 313, 218, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelFirstName' /&gt;" Guid="fef74285-2850-4b31-a43b-6fceeca4ad52" InformativeScreenshot="e6127953b96d491d15cd864f1658128b.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="648, 294, 64, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='First Name' check:innerText='First Name' /&gt;" Guid="133cafe8-2208-443c-a944-2f8bd84ee5e3" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Last Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;Last Name&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="648, 224, 218, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelLastName' /&gt;" Guid="4aaf890f-2915-4da2-b25c-9b014140fed9" InformativeScreenshot="cd231b6f718606a7434418c0bbb70841.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="648, 206, 64, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Last Name' check:innerText='Last Name' /&gt;" Guid="c054f6e8-1ded-4f73-ae01-9b64ab43887a" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Company Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;Company Name&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="468, 136, 278, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelCompanyName' /&gt;" Guid="9e89eaa7-c58a-47f3-8f24-bf654667dd91" InformativeScreenshot="c3f3749f03e4ec9de1711a107598e50e.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="468, 117, 99, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Company Name' check:innerText='Company Name' /&gt;" Guid="116067b1-79ad-46fd-bd6c-b312a9a16f28" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Role in Company" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;Role in Company&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="468, 224, 278, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelRole' /&gt;" Guid="b2aa607e-01c1-4c0b-84ee-3df8429f7617" InformativeScreenshot="8a2d796a6b3725e455a9a4eadffa6c00.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="468, 206, 102, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Role in Company' check:innerText='Role in Company' /&gt;" Guid="468420bb-f7ad-499e-9ace-2f38a7a4a46d" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Address" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;Address&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="468, 313, 278, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelAddress' /&gt;" Guid="92898c9f-8121-48eb-be91-c61bd06f80ee" InformativeScreenshot="0c28ce1c43244dbe83ebca2c72fdea75.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="468, 294, 48, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Address' check:innerText='Address' /&gt;" Guid="9580ff4c-ee71-4bb8-a61f-76e97c2ae00e" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Email" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="768, 136, 278, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelEmail' /&gt;" Guid="7df73e74-b70d-491d-b04c-721626aa6e31" InformativeScreenshot="a44905086a1d79843305ea6561cab212.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="768, 117, 33, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email' check:innerText='Email' /&gt;" Guid="4036b186-53c5-46fb-a9a7-f937c0ac0415" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Phone Number" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Text="[CurrentRow(&quot;Phone Number&quot;).ToString]" Version="V5">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="468, 401, 278, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' ng-reflect-name='labelPhone' /&gt;" Guid="4c906d41-c363-440b-a085-b21a0af84eb6" InformativeScreenshot="00ecdf03b1d2170440300727eb7dd8ac.jpg" IsResponsive="True" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="468, 383, 89, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Phone Number' check:innerText='Phone Number' /&gt;" Guid="7a136e8c-4c16-4e35-b2d9-fe35cc797952" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <ui:LogMessage DisplayName="Log Message - Processing row" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Processing row &quot; + intRowIndex.ToString+&quot;, Execution completed&quot;]" />
+                              </Sequence>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception">
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                    <ui:LogMessage DisplayName="Log Message - Error processing row" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Error processing row &quot; + intRowIndex.ToString+&quot; &quot;+exception.Message]" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                            <TryCatch.Finally>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5" />
+                            </TryCatch.Finally>
+                          </TryCatch>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Submit" HealingAgentBehavior="SameAsCard" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2ed5ff4e-e4a5-4c47-b209-5688814bcf35" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="rpachallenge.com" DesignTimeRectangle="456, 467, 116, 36" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" Guid="55dd19a6-4f8b-4749-b9cc-979343d920d8" InformativeScreenshot="2bde18fc8bbe3a5ba1857ca2329a13f4.jpg" ScopeSelectorArgument="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachRow.Body>
+                  </ui:ForEachRow>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="b537bf43609036e76562a352cd0715a8.jpg" Selector="&lt;html title='Rpa Challenge' app='chrome.exe' /&gt;" Url="https://rpachallenge.com/" Version="V3" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Throw DisplayName="Throw - filling out the form" Exception="[new SystemException(&quot;Error while filling out the form: &quot; + exception.Message)]" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8" />
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
